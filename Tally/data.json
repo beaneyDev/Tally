@@ -1,0 +1,79 @@
+{
+    "tallies": [
+                {
+                "type": "CSS"
+                },
+                {
+                "type": "HTML"
+                },
+                {
+                "type": "JS"
+                },
+                {
+                "type": "IOS"
+                },
+                {
+                "type": "AngularJS"
+                },
+                {
+                "type": "ReactJS"
+                },
+                {
+                "type": "PHP"
+                },
+                {
+                "type": "C#"
+                },
+                {
+                "type": "ASP.NET MVC"
+                },
+                {
+                "type": "VB"
+                },
+                {
+                "type": "WordPress"
+                },
+                {
+                "type": "Drupal"
+                },
+                {
+                "type": "Unit Testing"
+                },
+                {
+                "type": "Web API"
+                },
+                {
+                "type": "JQuery"
+                },
+                {
+                "type": "SQL"
+                },
+                {
+                "type": "Code Igniter"
+                },
+                {
+                "type": "Symphony 2"
+                },
+                {
+                "type": "Less"
+                },
+                {
+                "type": "Sass"
+                },
+                {
+                "type": "Node.js"
+                },
+                {
+                "type": "Python"
+                },
+                {
+                "type": "Backbone.js"
+                },
+                {
+                "type": "Laravel"
+                },
+                {
+                "type": "Zend"
+                }
+                ]
+}

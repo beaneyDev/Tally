@@ -1,14 +1,16 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Tally" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +18,81 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="cHd-Rg-VSY">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="gWW-i7-YhL">
+                                    <size key="itemSize" width="161" height="121"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="tallyCell" id="RGm-r6-pIW" customClass="TallyCollectionViewCell" customModule="Tally" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="161" height="121"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="161" height="121"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YE3-zH-Ue3">
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="0NR-VT-beo">
+                                                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="22" translatesAutoresizingMaskIntoConstraints="NO" id="Gc2-rF-ix3">
+                                                            <fontDescription key="fontDescription" type="system" pointSize="44"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstItem="Gc2-rF-ix3" firstAttribute="centerX" secondItem="YE3-zH-Ue3" secondAttribute="centerX" id="AwL-9a-MpQ"/>
+                                                        <constraint firstItem="Gc2-rF-ix3" firstAttribute="leading" secondItem="YE3-zH-Ue3" secondAttribute="leading" id="Bmk-iQ-TGS"/>
+                                                        <constraint firstItem="0NR-VT-beo" firstAttribute="centerX" secondItem="YE3-zH-Ue3" secondAttribute="centerX" id="OmF-Ti-tz6"/>
+                                                        <constraint firstAttribute="trailing" secondItem="0NR-VT-beo" secondAttribute="trailing" constant="8" id="W1T-Hg-Ad5"/>
+                                                        <constraint firstAttribute="bottom" secondItem="Gc2-rF-ix3" secondAttribute="bottom" constant="7" id="Z9h-bb-m6a"/>
+                                                        <constraint firstAttribute="trailing" secondItem="Gc2-rF-ix3" secondAttribute="trailing" id="akb-MV-x0r"/>
+                                                        <constraint firstItem="Gc2-rF-ix3" firstAttribute="top" secondItem="0NR-VT-beo" secondAttribute="bottom" constant="8" id="dD7-E0-5u5"/>
+                                                        <constraint firstItem="0NR-VT-beo" firstAttribute="top" secondItem="YE3-zH-Ue3" secondAttribute="top" constant="8" id="raC-Fl-1Rr"/>
+                                                        <constraint firstItem="0NR-VT-beo" firstAttribute="leading" secondItem="YE3-zH-Ue3" secondAttribute="leading" constant="8" id="xdW-cx-Nu5"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="YE3-zH-Ue3" firstAttribute="leading" secondItem="RGm-r6-pIW" secondAttribute="leadingMargin" id="09t-bf-WhP"/>
+                                            <constraint firstItem="YE3-zH-Ue3" firstAttribute="bottom" secondItem="RGm-r6-pIW" secondAttribute="bottomMargin" id="2xO-j6-OMs"/>
+                                            <constraint firstItem="YE3-zH-Ue3" firstAttribute="top" secondItem="RGm-r6-pIW" secondAttribute="topMargin" id="3qo-61-nul"/>
+                                            <constraint firstItem="YE3-zH-Ue3" firstAttribute="trailing" secondItem="RGm-r6-pIW" secondAttribute="trailingMargin" id="5md-Bo-gVM"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="bgView" destination="YE3-zH-Ue3" id="bu7-Bs-j0x"/>
+                                            <outlet property="number" destination="Gc2-rF-ix3" id="QuL-TT-Hw8"/>
+                                            <outlet property="type" destination="0NR-VT-beo" id="4sM-Vz-Or9"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="cHd-Rg-VSY" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="I1A-du-3r4"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="cHd-Rg-VSY" secondAttribute="bottom" constant="20" id="OJq-FY-zDS"/>
+                            <constraint firstItem="cHd-Rg-VSY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="bij-Ca-65z"/>
+                            <constraint firstItem="cHd-Rg-VSY" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="qY1-zO-Eu7"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="cHd-Rg-VSY" id="2Ha-m9-Xhq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="123.68815592203899"/>
         </scene>
     </scenes>
 </document>

@@ -12,6 +12,10 @@
 		BE583CE31DC4D4770020A83B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE583CE11DC4D4770020A83B /* Main.storyboard */; };
 		BE583CE51DC4D4770020A83B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE583CE41DC4D4770020A83B /* Assets.xcassets */; };
 		BE583CE81DC4D4770020A83B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE583CE61DC4D4770020A83B /* LaunchScreen.storyboard */; };
+		BE583CF01DC4D50F0020A83B /* TallyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE583CEF1DC4D50F0020A83B /* TallyCollectionViewCell.swift */; };
+		BE583CF21DC4D55B0020A83B /* Tally.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE583CF11DC4D55B0020A83B /* Tally.swift */; };
+		BE583CF41DC4D5910020A83B /* TallyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE583CF31DC4D5910020A83B /* TallyController.swift */; };
+		BE583CF61DC4D94E0020A83B /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = BE583CF51DC4D94E0020A83B /* data.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		BE583CE41DC4D4770020A83B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BE583CE71DC4D4770020A83B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BE583CE91DC4D4770020A83B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BE583CEF1DC4D50F0020A83B /* TallyCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TallyCollectionViewCell.swift; sourceTree = "<group>"; };
+		BE583CF11DC4D55B0020A83B /* Tally.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tally.swift; sourceTree = "<group>"; };
+		BE583CF31DC4D5910020A83B /* TallyController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TallyController.swift; sourceTree = "<group>"; };
+		BE583CF51DC4D94E0020A83B /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +68,10 @@
 				BE583CE41DC4D4770020A83B /* Assets.xcassets */,
 				BE583CE61DC4D4770020A83B /* LaunchScreen.storyboard */,
 				BE583CE91DC4D4770020A83B /* Info.plist */,
+				BE583CEF1DC4D50F0020A83B /* TallyCollectionViewCell.swift */,
+				BE583CF11DC4D55B0020A83B /* Tally.swift */,
+				BE583CF31DC4D5910020A83B /* TallyController.swift */,
+				BE583CF51DC4D94E0020A83B /* data.json */,
 			);
 			path = Tally;
 			sourceTree = "<group>";
@@ -96,7 +108,8 @@
 				TargetAttributes = {
 					BE583CD91DC4D4770020A83B = {
 						CreatedOnToolsVersion = 8.0;
-						ProvisioningStyle = Automatic;
+						DevelopmentTeam = U5FH5JR68H;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -126,6 +139,7 @@
 				BE583CE81DC4D4770020A83B /* LaunchScreen.storyboard in Resources */,
 				BE583CE51DC4D4770020A83B /* Assets.xcassets in Resources */,
 				BE583CE31DC4D4770020A83B /* Main.storyboard in Resources */,
+				BE583CF61DC4D94E0020A83B /* data.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,6 +150,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE583CF21DC4D55B0020A83B /* Tally.swift in Sources */,
+				BE583CF41DC4D5910020A83B /* TallyController.swift in Sources */,
+				BE583CF01DC4D50F0020A83B /* TallyCollectionViewCell.swift in Sources */,
 				BE583CE01DC4D4770020A83B /* ViewController.swift in Sources */,
 				BE583CDE1DC4D4770020A83B /* AppDelegate.swift in Sources */,
 			);
@@ -260,10 +277,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = U5FH5JR68H;
 				INFOPLIST_FILE = Tally/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pagesuite.Tally;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "d1c504c9-c8b9-420b-9996-18314e59ae37";
+				PROVISIONING_PROFILE_SPECIFIER = WildcaredDev;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -272,10 +293,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = U5FH5JR68H;
 				INFOPLIST_FILE = Tally/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pagesuite.Tally;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "d1c504c9-c8b9-420b-9996-18314e59ae37";
+				PROVISIONING_PROFILE_SPECIFIER = WildcaredDev;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
